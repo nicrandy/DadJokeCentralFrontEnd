@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dad Jokes Central</title>
+</head>
+<body>
+    <div id="titleSection" class="section">
+            <h1 id="title">Dad Jokes Central</h1>
+            <img id="dadLaughingImg" src="\images\dadLaughing.png" alt="Dad Joke Gif">
+    </div>
+    <!-- change this section if user is already logged in -->
+    <div id="loginArea" class="section">
+        <h1 id="instructions">Login or signup to share your dad jokes and vote on others jokes</h1>
+        <div class="buttons" id="buttonElement">
+            <button onclick="window.location.href='/signup';" class="auth" id="Signup">Signup</button>
+            <button onclick="window.location.href='/login';" class="auth" id="Login">Login</button>
+        </div>
+    </div>
+    <!-- end of area to change if user is logged in -->
+    <div id="jokeArea" class="section">
+        <h2 id="recentJokesTitle">Recent jokes submited by users</h2>
+        <!-- iterate this area to show multiple jokes
+        html can be placed using the id -->
+        <div id="individualJoke" class="section">
+            <h3 id="joke" class="jokeDetails">Why did the chicken cross the road? To get to the other side</h3>
+            <div id="individualJokeAuthandDate" class="section">
+                <h4 id="author" class="jokeDetails">King Luis VII</h4>
+                <h4 id="date" class="jokeDetails">17-August-2022</h4>
+                <h4 id="score" class="jokeDetails">Score: 35</h4>
+                <!-- can also hide the like and dislike button if user isn't logged in -->
+                <h4 id="likes" class="jokeDetails likeButton">Like</h4>
+                <h4 id="dislikes" class="jokeDetails likeButton">Dislike</h4>
+            </div>
+        </div>
+        <!-- finished iterating area -->
+    </div>
+<script src="homeAction.js"></script>
+</body>
+</html>
